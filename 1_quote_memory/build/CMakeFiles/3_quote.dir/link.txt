@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/3_quote.dir/3_quote.cpp.o -o 3_quote 

@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(MyProject2)
+
+set(CMAKE_CXX_STANDARD 11)
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug)
+endif()
+# include_directories()
+add_executable(1_constr 1_constr.cpp)
+add_executable(2_series_constr 2_series_constr.cpp)
+add_executable(3_deep_and_shallow 3_deep_and_shallow.cpp)
+add_executable(4_static_class 4_static_class.cpp)
+add_executable(5_this 5_this.cpp)
+add_executable(6_const_func 6_const_func.cpp)
+add_executable(7_plus_reload 7_plus_reload.cpp)
+add_executable(8_shift_left_reload 8_shift_left_reload.cpp)
