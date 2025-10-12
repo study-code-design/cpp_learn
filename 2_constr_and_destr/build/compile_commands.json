@@ -38,5 +38,15 @@
   "directory": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build",
   "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/8_shift_left_reload.dir/8_shift_left_reload.cpp.o -c /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/8_shift_left_reload.cpp",
   "file": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/8_shift_left_reload.cpp"
+},
+{
+  "directory": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/9_add_reload.dir/9_add_reload.cpp.o -c /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/9_add_reload.cpp",
+  "file": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/9_add_reload.cpp"
+},
+{
+  "directory": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/10_assignment_reload.dir/10_assignment_reload.cpp.o -c /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/10_assignment_reload.cpp",
+  "file": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/10_assignment_reload.cpp"
 }
 ]

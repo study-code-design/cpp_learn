@@ -4,13 +4,14 @@ using namespace std;
 class Person
 {
     friend ostream &operator<<(ostream &cout,Person &p);
-     
-    private:
+public:
     Person(int a=0,int b = 0)
     {
         this->a = a;
         this->b = b;
     }
+private:
+    
     int a;
     int b;
 };

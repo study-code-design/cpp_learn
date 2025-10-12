@@ -220,6 +220,56 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/8_shift_left_reload.dir/build.make CMakeFiles/8_shift_left_reload.dir/build
 .PHONY : 8_shift_left_reload/fast
 
+#=============================================================================
+# Target rules for targets named 9_add_reload
+
+# Build rule for target.
+9_add_reload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 9_add_reload
+.PHONY : 9_add_reload
+
+# fast build rule for target.
+9_add_reload/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/9_add_reload.dir/build.make CMakeFiles/9_add_reload.dir/build
+.PHONY : 9_add_reload/fast
+
+#=============================================================================
+# Target rules for targets named 10_assignment_reload
+
+# Build rule for target.
+10_assignment_reload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 10_assignment_reload
+.PHONY : 10_assignment_reload
+
+# fast build rule for target.
+10_assignment_reload/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/10_assignment_reload.dir/build.make CMakeFiles/10_assignment_reload.dir/build
+.PHONY : 10_assignment_reload/fast
+
+10_assignment_reload.o: 10_assignment_reload.cpp.o
+.PHONY : 10_assignment_reload.o
+
+# target to build an object file
+10_assignment_reload.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/10_assignment_reload.dir/build.make CMakeFiles/10_assignment_reload.dir/10_assignment_reload.cpp.o
+.PHONY : 10_assignment_reload.cpp.o
+
+10_assignment_reload.i: 10_assignment_reload.cpp.i
+.PHONY : 10_assignment_reload.i
+
+# target to preprocess a source file
+10_assignment_reload.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/10_assignment_reload.dir/build.make CMakeFiles/10_assignment_reload.dir/10_assignment_reload.cpp.i
+.PHONY : 10_assignment_reload.cpp.i
+
+10_assignment_reload.s: 10_assignment_reload.cpp.s
+.PHONY : 10_assignment_reload.s
+
+# target to generate assembly for a file
+10_assignment_reload.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/10_assignment_reload.dir/build.make CMakeFiles/10_assignment_reload.dir/10_assignment_reload.cpp.s
+.PHONY : 10_assignment_reload.cpp.s
+
 1_constr.o: 1_constr.cpp.o
 .PHONY : 1_constr.o
 
@@ -412,6 +462,30 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/8_shift_left_reload.dir/build.make CMakeFiles/8_shift_left_reload.dir/8_shift_left_reload.cpp.s
 .PHONY : 8_shift_left_reload.cpp.s
 
+9_add_reload.o: 9_add_reload.cpp.o
+.PHONY : 9_add_reload.o
+
+# target to build an object file
+9_add_reload.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/9_add_reload.dir/build.make CMakeFiles/9_add_reload.dir/9_add_reload.cpp.o
+.PHONY : 9_add_reload.cpp.o
+
+9_add_reload.i: 9_add_reload.cpp.i
+.PHONY : 9_add_reload.i
+
+# target to preprocess a source file
+9_add_reload.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/9_add_reload.dir/build.make CMakeFiles/9_add_reload.dir/9_add_reload.cpp.i
+.PHONY : 9_add_reload.cpp.i
+
+9_add_reload.s: 9_add_reload.cpp.s
+.PHONY : 9_add_reload.s
+
+# target to generate assembly for a file
+9_add_reload.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/9_add_reload.dir/build.make CMakeFiles/9_add_reload.dir/9_add_reload.cpp.s
+.PHONY : 9_add_reload.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -420,6 +494,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... 10_assignment_reload"
 	@echo "... 1_constr"
 	@echo "... 2_series_constr"
 	@echo "... 3_deep_and_shallow"
@@ -428,6 +503,10 @@ help:
 	@echo "... 6_const_func"
 	@echo "... 7_plus_reload"
 	@echo "... 8_shift_left_reload"
+	@echo "... 9_add_reload"
+	@echo "... 10_assignment_reload.o"
+	@echo "... 10_assignment_reload.i"
+	@echo "... 10_assignment_reload.s"
 	@echo "... 1_constr.o"
 	@echo "... 1_constr.i"
 	@echo "... 1_constr.s"
@@ -452,6 +531,9 @@ help:
 	@echo "... 8_shift_left_reload.o"
 	@echo "... 8_shift_left_reload.i"
 	@echo "... 8_shift_left_reload.s"
+	@echo "... 9_add_reload.o"
+	@echo "... 9_add_reload.i"
+	@echo "... 9_add_reload.s"
 .PHONY : help
 
 

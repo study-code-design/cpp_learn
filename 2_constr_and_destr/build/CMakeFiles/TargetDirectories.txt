@@ -6,5 +6,7 @@
 /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build/CMakeFiles/6_const_func.dir
 /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build/CMakeFiles/7_plus_reload.dir
 /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build/CMakeFiles/8_shift_left_reload.dir
+/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build/CMakeFiles/9_add_reload.dir
+/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build/CMakeFiles/10_assignment_reload.dir
 /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build/CMakeFiles/edit_cache.dir
 /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build/CMakeFiles/rebuild_cache.dir
