@@ -48,5 +48,10 @@
   "directory": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build",
   "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/10_assignment_reload.dir/10_assignment_reload.cpp.o -c /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/10_assignment_reload.cpp",
   "file": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/10_assignment_reload.cpp"
+},
+{
+  "directory": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/11_relation_reload.dir/11_relation_reload.cpp.o -c /home/tu/Desktop/document/cpp_learn/2_constr_and_destr/11_relation_reload.cpp",
+  "file": "/home/tu/Desktop/document/cpp_learn/2_constr_and_destr/11_relation_reload.cpp"
 }
 ]
