@@ -1,0 +1,4 @@
+/home/tu/Desktop/document/cpp_learn/3_inheritance/build/CMakeFiles/1_inherit_test.dir
+/home/tu/Desktop/document/cpp_learn/3_inheritance/build/CMakeFiles/2_polymorphism.dir
+/home/tu/Desktop/document/cpp_learn/3_inheritance/build/CMakeFiles/edit_cache.dir
+/home/tu/Desktop/document/cpp_learn/3_inheritance/build/CMakeFiles/rebuild_cache.dir
