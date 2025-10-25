@@ -7,5 +7,8 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Debug)
 endif()
 
+
 add_executable(1_inherit_test 1_inherit_test.cpp)
 add_executable(2_polymorphism 2_polymorphism.cpp)
+add_executable(4_code_test 4_code_test.cpp)
+add_executable(5_pol_test 5_pol_test.cpp)

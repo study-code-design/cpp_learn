@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/1_inherit_test.dir/1_inherit_test.cpp.o -o 1_inherit_test 
+/usr/bin/g++ -g CMakeFiles/1_inherit_test.dir/1_inherit_test.cpp.o -o 1_inherit_test 

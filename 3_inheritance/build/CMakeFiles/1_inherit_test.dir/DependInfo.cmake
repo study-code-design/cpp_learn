@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tu/Desktop/document/cpp_learn/3_inheritance/1_inherit_test.cpp" "CMakeFiles/1_inherit_test.dir/1_inherit_test.cpp.o" "gcc" "CMakeFiles/1_inherit_test.dir/1_inherit_test.cpp.o.d"
+  "/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/1_inherit_test.cpp" "CMakeFiles/1_inherit_test.dir/1_inherit_test.cpp.o" "gcc" "CMakeFiles/1_inherit_test.dir/1_inherit_test.cpp.o.d"
   )
 
 # Targets to which this target links.

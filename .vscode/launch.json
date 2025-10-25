@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/tu/Desktop/document/cpp_learn/3_inheritance",
-      "program": "/home/tu/Desktop/document/cpp_learn/3_inheritance/build/Debug/outDebug",
+      "cwd": "/home/tu/Desktop/ros_folder/cpp_learn/4_cv_test",
+      "program": "/home/tu/Desktop/ros_folder/cpp_learn/4_cv_test/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

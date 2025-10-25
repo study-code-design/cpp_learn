@@ -6,7 +6,7 @@ class base
 public:
     base()
     {
-        cout << "base构造" << endl;
+        cout << "base构造test" << endl;
     }
     ~base()
     {

@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/2_polymorphism.dir/2_polymorphism.cpp.o -o 2_polymorphism 
+/usr/bin/g++ -g CMakeFiles/2_polymorphism.dir/2_polymorphism.cpp.o -o 2_polymorphism 

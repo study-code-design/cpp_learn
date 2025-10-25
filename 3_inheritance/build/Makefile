@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tu/Desktop/document/cpp_learn/3_inheritance
+CMAKE_SOURCE_DIR = /home/tu/Desktop/ros_folder/cpp_learn/3_inheritance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tu/Desktop/document/cpp_learn/3_inheritance/build
+CMAKE_BINARY_DIR = /home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tu/Desktop/document/cpp_learn/3_inheritance/build/CMakeFiles /home/tu/Desktop/document/cpp_learn/3_inheritance/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles /home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tu/Desktop/document/cpp_learn/3_inheritance/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,32 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_polymorphism.dir/build.make CMakeFiles/2_polymorphism.dir/build
 .PHONY : 2_polymorphism/fast
 
+#=============================================================================
+# Target rules for targets named 4_code_test
+
+# Build rule for target.
+4_code_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 4_code_test
+.PHONY : 4_code_test
+
+# fast build rule for target.
+4_code_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/4_code_test.dir/build.make CMakeFiles/4_code_test.dir/build
+.PHONY : 4_code_test/fast
+
+#=============================================================================
+# Target rules for targets named 5_pol_test
+
+# Build rule for target.
+5_pol_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 5_pol_test
+.PHONY : 5_pol_test
+
+# fast build rule for target.
+5_pol_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/5_pol_test.dir/build.make CMakeFiles/5_pol_test.dir/build
+.PHONY : 5_pol_test/fast
+
 1_inherit_test.o: 1_inherit_test.cpp.o
 .PHONY : 1_inherit_test.o
 
@@ -190,6 +216,54 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2_polymorphism.dir/build.make CMakeFiles/2_polymorphism.dir/2_polymorphism.cpp.s
 .PHONY : 2_polymorphism.cpp.s
 
+4_code_test.o: 4_code_test.cpp.o
+.PHONY : 4_code_test.o
+
+# target to build an object file
+4_code_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/4_code_test.dir/build.make CMakeFiles/4_code_test.dir/4_code_test.cpp.o
+.PHONY : 4_code_test.cpp.o
+
+4_code_test.i: 4_code_test.cpp.i
+.PHONY : 4_code_test.i
+
+# target to preprocess a source file
+4_code_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/4_code_test.dir/build.make CMakeFiles/4_code_test.dir/4_code_test.cpp.i
+.PHONY : 4_code_test.cpp.i
+
+4_code_test.s: 4_code_test.cpp.s
+.PHONY : 4_code_test.s
+
+# target to generate assembly for a file
+4_code_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/4_code_test.dir/build.make CMakeFiles/4_code_test.dir/4_code_test.cpp.s
+.PHONY : 4_code_test.cpp.s
+
+5_pol_test.o: 5_pol_test.cpp.o
+.PHONY : 5_pol_test.o
+
+# target to build an object file
+5_pol_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/5_pol_test.dir/build.make CMakeFiles/5_pol_test.dir/5_pol_test.cpp.o
+.PHONY : 5_pol_test.cpp.o
+
+5_pol_test.i: 5_pol_test.cpp.i
+.PHONY : 5_pol_test.i
+
+# target to preprocess a source file
+5_pol_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/5_pol_test.dir/build.make CMakeFiles/5_pol_test.dir/5_pol_test.cpp.i
+.PHONY : 5_pol_test.cpp.i
+
+5_pol_test.s: 5_pol_test.cpp.s
+.PHONY : 5_pol_test.s
+
+# target to generate assembly for a file
+5_pol_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/5_pol_test.dir/build.make CMakeFiles/5_pol_test.dir/5_pol_test.cpp.s
+.PHONY : 5_pol_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,12 +274,20 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... 1_inherit_test"
 	@echo "... 2_polymorphism"
+	@echo "... 4_code_test"
+	@echo "... 5_pol_test"
 	@echo "... 1_inherit_test.o"
 	@echo "... 1_inherit_test.i"
 	@echo "... 1_inherit_test.s"
 	@echo "... 2_polymorphism.o"
 	@echo "... 2_polymorphism.i"
 	@echo "... 2_polymorphism.s"
+	@echo "... 4_code_test.o"
+	@echo "... 4_code_test.i"
+	@echo "... 4_code_test.s"
+	@echo "... 5_pol_test.o"
+	@echo "... 5_pol_test.i"
+	@echo "... 5_pol_test.s"
 .PHONY : help
 
 

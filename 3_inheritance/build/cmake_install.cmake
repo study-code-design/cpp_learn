@@ -1,4 +1,4 @@
-# Install script for directory: /home/tu/Desktop/document/cpp_learn/3_inheritance
+# Install script for directory: /home/tu/Desktop/ros_folder/cpp_learn/3_inheritance
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tu/Desktop/document/cpp_learn/3_inheritance/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

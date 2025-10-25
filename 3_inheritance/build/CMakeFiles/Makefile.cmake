@@ -45,4 +45,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/1_inherit_test.dir/DependInfo.cmake"
   "CMakeFiles/2_polymorphism.dir/DependInfo.cmake"
+  "CMakeFiles/4_code_test.dir/DependInfo.cmake"
+  "CMakeFiles/5_pol_test.dir/DependInfo.cmake"
   )

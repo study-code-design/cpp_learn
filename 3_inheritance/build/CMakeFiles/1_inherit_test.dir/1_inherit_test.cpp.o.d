@@ -1,5 +1,5 @@
 CMakeFiles/1_inherit_test.dir/1_inherit_test.cpp.o: \
- /home/tu/Desktop/document/cpp_learn/3_inheritance/1_inherit_test.cpp \
+ /home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/1_inherit_test.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
