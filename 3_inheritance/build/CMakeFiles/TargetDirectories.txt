@@ -1,6 +1,0 @@
-/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles/1_inherit_test.dir
-/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles/2_polymorphism.dir
-/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles/4_code_test.dir
-/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles/5_pol_test.dir
-/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles/edit_cache.dir
-/home/tu/Desktop/ros_folder/cpp_learn/3_inheritance/build/CMakeFiles/rebuild_cache.dir
