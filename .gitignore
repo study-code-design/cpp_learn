@@ -1,3 +1,8 @@
 opencv/
 eigen-3.4.1/
-# 3_inheritance/build/
+
+/.vscode
+**/.vscode
+**/build/*
+
+!**/build/.gitkeep
