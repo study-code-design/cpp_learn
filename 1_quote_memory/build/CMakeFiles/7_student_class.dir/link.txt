@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/7_student_class.dir/7_student_class.cpp.o -o 7_student_class 

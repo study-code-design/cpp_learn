@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/3_deep_and_shallow.dir/3_deep_and_shallow.cpp.o -o 3_deep_and_shallow 

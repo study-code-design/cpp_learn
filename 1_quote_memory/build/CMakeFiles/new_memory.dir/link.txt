@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/new_memory.dir/new_memory.cpp.o -o new_memory 

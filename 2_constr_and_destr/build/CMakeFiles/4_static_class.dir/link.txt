@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/4_static_class.dir/4_static_class.cpp.o -o 4_static_class 

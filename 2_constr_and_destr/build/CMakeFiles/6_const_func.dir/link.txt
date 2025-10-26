@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/6_const_func.dir/6_const_func.cpp.o -o 6_const_func 

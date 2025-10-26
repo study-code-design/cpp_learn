@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/2_series_constr.dir/2_series_constr.cpp.o -o 2_series_constr 

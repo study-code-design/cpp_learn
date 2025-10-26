@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/inn_area.dir/inn_area.cpp.o -o inn_area 
