@@ -6,3 +6,5 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(1_time 1_time.cpp)
 add_executable(2_dir 2_dir.cpp)
+add_executable(3_signal 3_signal.cpp)
+add_executable(4_process 4_process.cpp)

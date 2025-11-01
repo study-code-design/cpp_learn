@@ -28,5 +28,12 @@ int main(int argc,char *argv[])
     // get file list #include <dirent.h>
     DIR *dir;
     if ((dir=opendir(argv[1]))== 0) return -1;
-
+    struct dirent *stdinfo=nullptr;
+    while (1)
+    {
+        if((stdinfo=readdir(dir))==nullptr) break;
+        cout << "file name: " << stdinfo->d_name << endl;
+        cout << "file type: " << (int)stdinfo->d_type << endl;
+    }
+    closedir(dir);
 }
