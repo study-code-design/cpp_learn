@@ -14,12 +14,14 @@ message(STATUS "Eigen3 include dirs: ${EIGEN3_INCLUDE_DIRS}")
 
 # 添加可执行文件
 add_executable(my_program main.cpp)
-
+add_executable(test1 test1.cpp)
 # 推荐把 include 路径/依赖绑定到 target 上（modern CMake）
 # OpenCV 的 find_package 通常会提供 OpenCV_LIBS 或者 OpenCV::... targets
 target_include_directories(my_program PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(my_program PRIVATE ${OpenCV_LIBS})
 
+target_include_directories(test1 PRIVATE ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(test1 PRIVATE ${OpenCV_LIBS})
 # 对 Eigen：使用已导出的目标（header-only）
 target_link_libraries(my_program PRIVATE Eigen3::Eigen)
 
