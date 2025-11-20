@@ -4,5 +4,5 @@ eigen-3.4.1/
 /.vscode
 **/.vscode
 **/build/*
-
+**/.idea
 !**/build/.gitkeep

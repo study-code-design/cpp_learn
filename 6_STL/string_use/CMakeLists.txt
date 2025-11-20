@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(STRING_USE)
+set(CMAKE_CXX_STANDARD 11)
+set(CMKAE_BUILD_TYPE Debug)
+add_executable(1_string 1_string.cpp)
+add_executable(2_string_assign 2_string_assign.cpp)
+add_executable(3_string_find 3_string_find.cpp)
+add_executable(4_substract_str 4_substract_str.cpp)
