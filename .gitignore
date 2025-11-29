@@ -1,8 +1,57 @@
+# Third-party libraries
 opencv/
 eigen-3.4.1/
 
+# Build and install directories
+**/build/
+**/install/
+**/cmake-build-debug/
+**/cmake-build-*/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/compile_commands.json
+
+# Executable files and binaries
+**/*_test
+**/*_test.cpp
+**/*.out
+**/*.exe
+**/*.bin
+**/*.o
+**/*.a
+**/*.so
+**/*.dylib
+**/*.dll
+
+# Log files
+**/log/
+**/*.log
+
+# IDE and editor files
 /.vscode
 **/.vscode
-**/build/*
-**/.idea
+**/.idea/
+**/*.iml
+**/*.swp
+**/*.swo
+**/*~
+
+# CMake specific files
+**/CTestTestfile.cmake
+**/DartConfiguration.tcl
+**/Testing/
+
+# Submodules - ignore untracked content
+4_opencv_learn/matplotlib-cpp/
+
+!**/CMakeLists.txt  # 但保留需要的 CMakeLists.txt
+
+# Temporary and backup files
+**/*.tmp
+**/*.temp
+**/*#
+
+# Keep .gitkeep files in build directories
 !**/build/.gitkeep
