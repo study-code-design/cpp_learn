@@ -2,7 +2,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
-
+#include <chrono>
 std::vector<int> move_zero(std::vector<int>& nums)
 {
   /* if nums.size() == 1 return
@@ -38,17 +38,20 @@ std::vector<int> move_zero(std::vector<int>& nums)
     }
     return nums;
 }
-std::vector<int> moveZeroes(std::vector<int>& nums) {
+std::vector<int> moveZeroes(std::vector<int>& nums)
+{
     int stack_size = 0;
     for(int x : nums){
         if(x) nums[stack_size++] = x;
     }
     std::fill(nums.begin() + stack_size, nums.end(), 0);
     return nums;
+
 }
 int main()
 {
     using namespace std;
+    auto start = chrono::high_resolution_clock::now();
     list<int> l;
     vector<int> v{4,2,4,0,0,3,0,5,1,0};
     // vector<int> v2 = move_zero(v);
@@ -65,4 +68,13 @@ int main()
             cout << i << " ";
         }
     }
+    auto end = chrono::high_resolution_clock::now();
+    cout << "所用时间：" << chrono::duration_cast<chrono::nanoseconds>(end - start).count() << endl;
 }
+
+
+
+
+
+
+
