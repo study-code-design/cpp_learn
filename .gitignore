@@ -12,7 +12,7 @@ eigen-3.4.1/
 **/cmake_install.cmake
 **/Makefile
 **/compile_commands.json
-
+**/.idea/
 # Executable files and binaries
 **/*_test
 **/*_test.cpp
