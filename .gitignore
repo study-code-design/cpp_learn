@@ -13,6 +13,8 @@ eigen-3.4.1/
 **/Makefile
 **/compile_commands.json
 **/.idea/
+**/.obsidian/
+.obsidian/
 # Executable files and binaries
 **/*_test
 **/*_test.cpp
