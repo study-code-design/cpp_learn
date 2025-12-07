@@ -1,38 +1,39 @@
-cmake_minimum_required(VERSION 3.10)
-project(MyOpenCVProject LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.11)
+project(4_opencv_learn LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# 查找 OpenCV 和 Eigen3
+# 查找 OpenCV - 优先使用导入目标
 find_package(OpenCV REQUIRED)
-# 要求至少 3.3，使用 NO_MODULE 更倾向于使用 config package（系统上有时需要）
-find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
+# 从系统路径查找 matplotlib_cpp
 find_package(matplotlib_cpp REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+# 使用 OpenCV 的导入目标（如果可用）
+if(TARGET OpenCV::OpenCV)
+    message(STATUS "Using OpenCV imported target: OpenCV::OpenCV")
+    set(OPENCV_TARGET OpenCV::OpenCV)
+else()
+    message(STATUS "Using OpenCV variables: ${OpenCV_LIBS}")
+    set(OPENCV_TARGET ${OpenCV_LIBS})
+endif()
 
-message(STATUS "Found OpenCV version: ${OpenCV_VERSION}")
-message(STATUS "Eigen3 include dirs: ${EIGEN3_INCLUDE_DIRS}")
+# 创建可执行文件 - 使用正确的目标名称
+add_executable(1_load_image 1_load_image.cpp)
+target_link_libraries(1_load_image PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
 
-# 添加可执行文件
-add_executable(1_show_image 1_show_image.cpp)
-add_executable(2_show_video 2_show_video.cpp)
+add_executable(2_load_video 2_load_video.cpp)
+target_link_libraries(2_load_video PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
 
-# 推荐把 include 路径/依赖绑定到 target 上（modern CMake）
-# OpenCV 的 find_package 通常会提供 OpenCV_LIBS 或者 OpenCV::... targets
-target_include_directories(1_show_image PRIVATE
-                            ${OpenCV_INCLUDE_DIRS})
-target_link_libraries(1_show_image PRIVATE ${OpenCV_LIBS})
-target_include_directories(2_show_video PRIVATE 
-                            ${OpenCV_INCLUDE_DIRS})
-target_link_libraries(2_show_video PRIVATE ${OpenCV_LIBS})
+add_executable(3_base_func 3_base_func.cpp)
+target_link_libraries(3_base_func PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
 
-# 对 Eigen：使用已导出的目标（header-only）
-target_link_libraries(1_show_image PRIVATE Eigen3::Eigen)
-target_link_libraries(2_show_video PRIVATE Eigen3::Eigen)
 
-target_link_libraries(1_show_image PRIVATE matplotlib_cpp::matplotlib_cpp)
-target_link_libraries(2_show_video PRIVATE matplotlib_cpp::matplotlib_cpp)
-# 可选：如果你想一次性让 target 继承 OpenCV 的 include，也可以只用 link：
-# target_link_libraries(my_program PRIVATE ${OpenCV_LIBS} Eigen3::Eigen)
+add_executable(4_resize_crop 4_resize_crop.cpp)
+target_link_libraries(4_resize_crop PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
+
+add_executable(5_drawShaps_texts 5_drawShaps_texts.cpp)
+target_link_libraries(5_drawShaps_texts PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
