@@ -31,9 +31,17 @@ target_link_libraries(2_load_video PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matp
 add_executable(3_base_func 3_base_func.cpp)
 target_link_libraries(3_base_func PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
 
-
 add_executable(4_resize_crop 4_resize_crop.cpp)
 target_link_libraries(4_resize_crop PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
 
 add_executable(5_drawShaps_texts 5_drawShaps_texts.cpp)
 target_link_libraries(5_drawShaps_texts PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
+
+add_executable(6_wrap_image 6_wrap_image.cpp)
+target_link_libraries(6_wrap_image PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
+
+add_executable(7_detect_color 7_detect_color.cpp)
+target_link_libraries(7_detect_color PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
+
+add_executable(8_find_shapes 8_find_shapes.cpp)
+target_link_libraries(8_find_shapes PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)

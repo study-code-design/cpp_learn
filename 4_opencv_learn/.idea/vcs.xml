@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$USER_HOME$/Desktop/document/cpp_learn" vcs="Git" />
-    <mapping directory="$USER_HOME$/Desktop/document/cpp_learn/4_opencv_learn" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
   </component>
 </project>

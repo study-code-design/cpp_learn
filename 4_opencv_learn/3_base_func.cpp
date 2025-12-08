@@ -13,7 +13,7 @@ int main()
     using namespace std;
 
     Mat img, imgGray,imgBlur,imgCanny,imgDilate,imgErode;
-    string img_path = "/home/tu/cpp_learn/4_opencv_learn/lena.png";
+    string img_path = "/home/tu/cpp_learn/4_opencv_learn/pictures/lena.png";
     img = imread(img_path);
 
     cvtColor(img, imgGray, COLOR_BGR2GRAY);
