@@ -12,7 +12,7 @@ int main()
     using namespace cv;
     using namespace std;
 
-    string img_path = "/home/tu/cpp_learn/4_opencv_learn/pictures/lena.png";
+    string img_path = "/home/fiz/Desktop/document/cpp_learn/4_opencv_learn/lena.png";
     Mat img,imgResize,imgCrop;
     img = imread(img_path);
     if (img.empty())
