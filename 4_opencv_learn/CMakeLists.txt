@@ -45,3 +45,12 @@ target_link_libraries(7_detect_color PRIVATE ${OPENCV_TARGET} matplotlib_cpp::ma
 
 add_executable(8_find_shapes 8_find_shapes.cpp)
 target_link_libraries(8_find_shapes PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
+
+add_executable(9_face_detection 9_face_detection.cpp)
+target_link_libraries(9_face_detection PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
+
+add_executable(10_strokes_track 10_strokes_track.cpp)
+target_link_libraries(10_strokes_track PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
+
+add_executable(11_CamScanner 11_CamScanner.cpp)
+target_link_libraries(11_CamScanner PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
