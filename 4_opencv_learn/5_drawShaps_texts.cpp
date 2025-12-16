@@ -9,6 +9,7 @@
 namespace plt = matplotlibcpp;
 int main()
 {
+    
     using namespace cv;
     using namespace std;
     Mat img(512,512,CV_8UC3,Scalar(0,0,0));

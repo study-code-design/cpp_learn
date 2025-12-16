@@ -8,7 +8,7 @@ int hmin=0,hmax=180,smin=0,smax=255,vmin=0,vmax=255;
 
 int main()
 {
-    string path = "/home/tu/cpp_learn/4_opencv_learn/pictures/green_ball.jpg";
+    string path = "/home/fiz/Desktop/document/cpp_learn/4_opencv_learn/pictures/green_ball.jpg";
     try
     {
         img = imread(path);
@@ -21,12 +21,22 @@ int main()
     }
     resize(img,img,Size(),0.5,0.5);
     namedWindow("trackbars", (640,200));
-    createTrackbar("H min","trackbars",&hmin,180,NULL);
-    createTrackbar("H max","trackbars",&hmax,180,NULL);
-    createTrackbar("S min","trackbars",&smin,255,NULL);
-    createTrackbar("S max","trackbars",&smax,255,NULL);
-    createTrackbar("V min","trackbars",&vmin,255,NULL);
-    createTrackbar("V max","trackbars",&vmax,255,NULL);
+
+    createTrackbar("H min","trackbars",nullptr,180,NULL);
+    setTrackbarPos("H min","trackbars",hmin);
+    createTrackbar("H max","trackbars",nullptr,180,NULL);
+    setTrackbarPos("H max","trackbars",hmax);
+    createTrackbar("S min","trackbars",nullptr,255,NULL);
+    setTrackbarPos("S min","trackbars",smin);
+    createTrackbar("S max","trackbars",nullptr,255,NULL);
+    setTrackbarPos("S max","trackbars",smax);
+
+    createTrackbar("V min","trackbars",nullptr,255,NULL);
+    setTrackbarPos("V min","trackbars",vmin);
+
+    createTrackbar("V max","trackbars",nullptr,255,NULL);
+    setTrackbarPos("V max","trackbars",vmax);
+
     
     while(true)
     {

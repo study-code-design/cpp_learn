@@ -69,7 +69,7 @@ int main()
 
     int w = 98;
     int h = 155;
-    Mat img = imread("/home/tu/cpp_learn/4_opencv_learn/pictures/objects.jpg");
+    Mat img = imread("/home/fiz/Desktop/document/cpp_learn/4_opencv_learn/pictures/objects.jpg");
     if (img.empty())
     {
         cout << "Could not read the image: " << endl;

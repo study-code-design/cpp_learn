@@ -44,6 +44,7 @@ add_executable(7_detect_color 7_detect_color.cpp)
 target_link_libraries(7_detect_color PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
 
 add_executable(8_find_shapes 8_find_shapes.cpp)
+# target_compile_definitions(8_find_shapes PRIVATE WITH_OPENCV)
 target_link_libraries(8_find_shapes PRIVATE ${OPENCV_TARGET} matplotlib_cpp::matplotlib_cpp)
 
 add_executable(9_face_detection 9_face_detection.cpp)
