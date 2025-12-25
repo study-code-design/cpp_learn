@@ -6,88 +6,93 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
+#include <vector>
+#define width 210
+#define height 297
+void pre_processing(cv::Mat &img_);
+void wrap_image_(std::vector<std::vector<cv::Point>> &ang_points_,cv::Mat &img_);
+void getContours_(cv::Mat &process_img_,cv::Mat &ori_img_);
 
-cv::Mat img;
-cv::VideoCapture cap;
 
 
 
-void Video_Or_Picture(char **argv_)
+int main(int argc,char** argv)
 {
-
-    const int num__ = std::stoi(argv_[2]);
-    if (num__ == 0)
-    {
-        img = cv::imread(argv_[1]);
-    }
-    else if (num__ == 1)
-    {
-        cap = cv::VideoCapture(argv_[1]);
-    }
-}
-void imshow_(const std::string &name_, const cv::Mat &img_)
-{
-    cv::imshow(name_, img_);
-    cv::waitKey(0);
-    cv::destroyAllWindows();
-}
-
-void getContours_(cv::Mat &preImg_, cv::Mat &img_)
-{
-    std::vector<std::vector<cv::Point>> contours__;
-    std::vector<std::vector<cv::Point>> conPoly__(contours__.size());
-    cv::findContours(preImg_, contours__, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
-    for (int i = 0; i < contours__.size(); i++)
-    {
-        int area__ = cv::contourArea(contours__[i]);
-        std::cout << "area: " << area__ << std::endl;
-        if (area__ > 300)
-        {
-            auto peri__ = cv::arcLength(contours__[i], true);
-            cv::approxPolyDP(contours__[i], conPoly__[i], 0.02 * peri__, false);
-            cv::drawContours(img_, contours__, i, cv::Scalar(255, 0, 0), 2);
-        }
-    }
-    imshow_("contours", img_);
-}
-
-void pre_process(cv::Mat &pre_img_)
-{
-
-    cv::Mat img_gray__,img_blur__,img_canny__;
-    cv::rotate(pre_img_, pre_img_, cv::ROTATE_90_COUNTERCLOCKWISE);
-    cv::resize(pre_img_, pre_img_, cv::Size(), 0.5, 0.5);
-    cv::cvtColor(pre_img_, img_gray__, cv::COLOR_BGR2GRAY);
-    cv::GaussianBlur(img_gray__, img_blur__, cv::Size(9, 9), 0);
-    cv::Canny(img_blur__, img_canny__, 20, 150);
-    // imshow_("canny", img_canny__);
-    getContours_(img_canny__, pre_img_);
-
-}
-
-
-
-
-int main(int argc, char** argv)
-{
-    if (argc != 3)
+    if (argc != 2)
     {
         std::cout << "-------------------------------------------------------------" << std::endl;
         std::cerr << "Usage: " << argv[0] << " <video url>/picture path"  << " 0/1 "<< std::endl;
         std::cout << "-------------------------------------------------------------" << std::endl;
         return -1;
     }
-
-    using namespace cv;
     using namespace std;
-    Video_Or_Picture(argv);
-    if (!img.empty())
+    using namespace cv;
+    string path = argv[1];
+    Mat img = imread(path,IMREAD_COLOR_BGR);
+    pre_processing(img);
+}
+
+
+void pre_processing(cv::Mat &img_)
+{
+    using namespace cv;
+    Mat pre_img,img_gray,img_blur,img_canny;
+    pre_img = img_.clone();
+    cvtColor(pre_img,img_gray,COLOR_BGR2GRAY);
+    GaussianBlur(img_gray,img_blur,Size(9,9),0);
+    Canny(img_blur,img_canny,20,150);
+    getContours_(img_canny,pre_img);
+
+}
+
+void getContours_(cv::Mat &process_img_,cv::Mat &ori_img_)
+{
+    using namespace cv;
+    std::vector<std::vector<Point>> contours;
+    std::vector<Vec4i> hierarchy;
+    findContours(process_img_,contours,hierarchy,RETR_EXTERNAL,CHAIN_APPROX_SIMPLE);
+    std::vector<std::vector<Point>> conPoly(contours.size());
+    std::vector<Rect> boundRect(contours.size());
+    for (int i = 0;i < contours.size();i++)
     {
-        pre_process(img);
+        int area = contourArea(contours[i]);
+        if (area > 4000 || conPoly[i].size() == 4)
+        {
+            std::cout << "area = " << area << std::endl;
+            double peri = arcLength(contours[i],true);
+            approxPolyDP(contours[i],conPoly[i],0.02*peri,true);
+            drawContours(ori_img_,conPoly,i,Scalar(0,0,255),2);
+            std::cout << conPoly[i].size() << std::endl; //角点个数
+        }
+
     }
+    wrap_image_(conPoly,ori_img_);
+
+}
+
+void wrap_image_(std::vector<std::vector<cv::Point>> &ang_points_,cv::Mat &img_)
+{
+    using namespace cv;
+    Mat img_wrap;
+    for (auto &ang : ang_points_)
+    {
+        if (ang.size() == 4)
+        {
+            Point2f src[4]={ang[0],ang[3],ang[1],ang[2]};
+            Point2f dst[4] = {Point2f(0,0),Point2f(width,0),Point2f(0,height),Point2f(width,height)};
+            for (int i = 1;const auto &p: src)
+            {
+                circle(img_,p,10,Scalar(0,255,255));
+                putText(img_,std::to_string(i++),p,FONT_HERSHEY_COMPLEX,2,Scalar(0,255,0));
+            }
 
 
-
-
-
+            Mat matrix = getPerspectiveTransform(src,dst);
+            warpPerspective(img_,img_wrap,matrix,Size(width,height));
+            imshow("wrap",img_wrap);
+            imshow("ori",img_);
+            waitKey(0);
+            destroyAllWindows();
+        }
+    }
 }

@@ -67,16 +67,16 @@ Mat matrix;
 int main()
 {
 
-    int w = 98;
-    int h = 155;
-    Mat img = imread("/home/fiz/Desktop/document/cpp_learn/4_opencv_learn/pictures/objects.jpg");
+    int w = 210;
+    int h = 297;
+    Mat img = imread("/home/tu/Documents/cpp_project/cpp_learn/4_opencv_learn/pictures/doc.png");
     if (img.empty())
     {
         cout << "Could not read the image: " << endl;
         return 1;
     }
-    rotate(img, img, ROTATE_90_COUNTERCLOCKWISE);
-    resize(img, img, Size(), 0.5, 0.5);
+    // rotate(img, img, ROTATE_90_COUNTERCLOCKWISE);
+    // resize(img, img, Size(), 0.5, 0.5);
     img.copyTo(img_draw);
     img.copyTo(img_original);
     img.copyTo(img_draw_copy);

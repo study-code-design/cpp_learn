@@ -4,9 +4,7 @@
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
-#include "matplotlibcpp.h"
 #include <iostream>
-namespace plt = matplotlibcpp;
 int main()
 {
     
@@ -23,16 +21,6 @@ int main()
     putText(img,"welcome to my world",Point(256,256),FONT_HERSHEY_SIMPLEX,0.7,Scalar(255,255,255),1);
 
     imshow("image",img);
-    
-
-
-
-
-
-
-
-
-
     waitKey(3000);
     destroyAllWindows();
 }
