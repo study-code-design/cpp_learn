@@ -19,7 +19,7 @@ eigen-3.4.1/
 **/*_test
 **/*_test.cpp
 **/*.out
-**/*.exe
+!**/*.exe
 **/*.bin
 **/*.o
 **/*.a
