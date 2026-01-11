@@ -7,6 +7,7 @@ set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 查找 OpenCV - 优先使用导入目标
+#set(OpenCV_DIR "D:/cpp_project/opencv/build/x64/vc16/lib")
 find_package(OpenCV REQUIRED)
 
 # 从系统路径查找 matplotlib_cpp
