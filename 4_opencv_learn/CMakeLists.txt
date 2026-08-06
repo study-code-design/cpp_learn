@@ -6,6 +6,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# Prefer the distro OpenCV package when both /usr and /usr/local are present.
+# This avoids picking up a custom /usr/local build with missing runtime deps.
+if(NOT DEFINED OpenCV_DIR)
+    set(OpenCV_DIR "/usr/local/lib/cmake/opencv4")
+endif()
+
 # 查找 OpenCV - 优先使用导入目标
 find_package(OpenCV REQUIRED)
 

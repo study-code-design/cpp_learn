@@ -1,0 +1,22 @@
+{
+  "name": "rl-rocm-clion",
+  "image": "rocm/dev-ubuntu-20.04:6.3.4-complete",
+  "workspaceFolder": "/workspaces/4_opencv_learn",
+  "remoteUser": "root",
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspaces/4_opencv_learn,type=bind",
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ],
+  "runArgs": [
+    "--network=host",
+    "--ipc=host"
+  ],
+  "customizations": {
+    "jetbrains": {
+      "backend": "CLion"
+    }
+  }
+}
